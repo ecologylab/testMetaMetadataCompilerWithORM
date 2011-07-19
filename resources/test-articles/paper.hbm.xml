@@ -1,4 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-
-<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles"><joined-subclass name="ecologylab.semantics.generated.test.test_articles.Paper" table="paper" extends="ecologylab.semantics.generated.test.test_articles.Article"><key column="orm_id" not-null="true"/><property name="abstractField" lazy="false" column="abstractField" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType"/><bag name="references" lazy="true" table="paper__references"><key column="orm_id" not-null="true"/><many-to-many column="paper_id" class="ecologylab.semantics.generated.test.test_articles.Paper"/></bag><bag name="citations" lazy="true" table="paper__citations"><key column="orm_id" not-null="true"/><many-to-many column="paper_id" class="ecologylab.semantics.generated.test.test_articles.Paper"/></bag><bag name="keywords" lazy="true" table="paper__keywords"><key column="paper_id" not-null="true"/><element column="value" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType"/></bag><bag name="tags" lazy="true" table="paper__tags"><key column="orm_id" not-null="true"/><many-to-many column="mmd_inline_tag_in_tags_in_paper_id" class="ecologylab.semantics.generated.test.test_articles.MmdInlineTagInTagsInPaper"/></bag></joined-subclass></hibernate-mapping>
+<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles">
+	<joined-subclass name="ecologylab.semantics.generated.test.test_articles.Paper" table="paper" extends="ecologylab.semantics.generated.test.test_articles.Article">
+		<key column="orm_id" not-null="true" />
+		<property name="abstractField" lazy="false" column="abstractField" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" />
+		<bag name="references" lazy="true" table="paper__references">
+			<key column="orm_id" not-null="true" />
+			<many-to-many column="paper_id" class="ecologylab.semantics.generated.test.test_articles.Paper" />
+		</bag>
+		<bag name="citations" lazy="true" table="paper__citations">
+			<key column="orm_id" not-null="true" />
+			<many-to-many column="paper_id" class="ecologylab.semantics.generated.test.test_articles.Paper" />
+		</bag>
+		<bag name="keywords" lazy="true" table="paper__keywords">
+			<key column="paper_id" not-null="true" />
+			<element column="value" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" />
+		</bag>
+		<bag name="tags" lazy="true" table="paper__tags">
+			<key column="orm_id" not-null="true" />
+			<many-to-many column="mmd_inline_tag_in_tags_in_paper_id" class="ecologylab.semantics.generated.test.test_articles.MmdInlineTagInTagsInPaper" />
+		</bag>
+	</joined-subclass>
+</hibernate-mapping>

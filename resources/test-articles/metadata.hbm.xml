@@ -1,4 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-
-<hibernate-mapping package="ecologylab.semantics.metadata"><class name="ecologylab.semantics.metadata.Metadata" table="metadata"><cache usage="read-only"/><id name="ormId" column="orm_id"><generator class="identity"/></id><property name="metaMetadataName" lazy="false" column="metaMetadataName" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType"/></class></hibernate-mapping>
+<hibernate-mapping package="ecologylab.semantics.metadata">
+	<class name="ecologylab.semantics.metadata.Metadata" table="metadata">
+		<cache usage="read-only" />
+		<id name="ormId" column="orm_id">
+			<generator class="identity" />
+		</id>
+		<property name="metaMetadataName" lazy="false" column="metaMetadataName" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" />
+	</class>
+</hibernate-mapping>
