@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ecologylab.semantics.metadata.builtins">
+	<joined-subclass name="ecologylab.semantics.metadata.builtins.Document" table="document" extends="ecologylab.semantics.metadata.Metadata">
+		<key column="orm_id" not-null="true" />
+<!--		<property name="location" lazy="false" column="location" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataParsedURLHibernateType" />-->
+<!--		<bag name="additionalLocations" lazy="true" table="document__additionalLocations">-->
+<!--			<key column="document_id" not-null="true" />-->
+<!--			<element column="value" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataParsedURLHibernateType" />-->
+<!--		</bag>-->
+	</joined-subclass>
+</hibernate-mapping>
