@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles">
-	<joined-subclass name="ecologylab.semantics.generated.test.test_articles.MmdInlineSourceInArticle" table="mmd_inline_source_in_article" extends="ecologylab.semantics.metadata.builtins.Document">
-		<key column="orm_id" not-null="true" />
-		<property name="yearOfPublication" lazy="false" column="yearOfPublication" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataIntegerHibernateType" />
-		<property name="isbn" lazy="false" column="isbn" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" />
-		<property name="archiveName" lazy="false" column="archiveName" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" />
-	</joined-subclass>
-</hibernate-mapping>
+
+<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles"><joined-subclass name="ecologylab.semantics.generated.test.test_articles.MmdInlineSourceInArticle" table="mmd_inline_source_in_article" extends="ecologylab.semantics.metadata.builtins.Document"><key column="orm_id" not-null="true"/><property name="yearOfPublication" lazy="false" column="yearOfPublication" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataIntegerHibernateType" access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor"/><property name="isbn" lazy="false" column="isbn" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor"/><property name="archiveName" lazy="false" column="archiveName" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor"/></joined-subclass></hibernate-mapping>

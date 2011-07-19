@@ -43,23 +43,23 @@ public class TestORM
 		Transaction tx = session.beginTransaction();
 
 		MmdInlineAuthorInAuthorsInArticle author1 = new MmdInlineAuthorInAuthorsInArticle();
-		author1.setNameValue("Bill Gates");
-		author1.setAffiliationValue("Microsoft");
+		author1.setName("Bill Gates");
+		author1.setAffiliation("Microsoft");
 		session.save(author1);
 
 		MmdInlineAuthorInAuthorsInArticle author2 = new MmdInlineAuthorInAuthorsInArticle();
-		author2.setNameValue("Steve Jobs");
-		author2.setAffiliationValue("Apple");
+		author2.setName("Steve Jobs");
+		author2.setAffiliation("Apple");
 		session.save(author2);
 
 		MmdInlineSourceInArticle conf = new MmdInlineSourceInArticle();
-		conf.setArchiveNameValue("International Conference");
-		conf.setYearOfPublicationValue(2011);
-		conf.setIsbnValue("123456789");
+		conf.setArchiveName("International Conference");
+		conf.setYearOfPublication(2011);
+		conf.setIsbn("123456789");
 		session.save(conf);
 
 		Paper paper1 = new Paper();
-		paper1.setArticleTitleValue("apple's design");
+		paper1.setTitle("apple's design");
 		paper1.setAuthors(new ArrayList<MmdInlineAuthorInAuthorsInArticle>());
 		paper1.getAuthors().add(author1);
 		paper1.setSource(conf);
@@ -69,7 +69,7 @@ public class TestORM
 		paper1.getKeywords().add(new MetadataString("design"));
 
 		Paper paper2 = new Paper();
-		paper2.setArticleTitleValue("bill + steve talk");
+		paper2.setTitle("bill + steve talk");
 		paper2.setAuthors(new ArrayList<MmdInlineAuthorInAuthorsInArticle>());
 		paper2.getAuthors().add(author1);
 		paper2.getAuthors().add(author2);
@@ -105,11 +105,11 @@ public class TestORM
 		for (Paper p : targetPapers)
 		{
 			System.out.format("%s'%d: (%d) %s, %s, %d reference(s), %d citation(s).",
-					p.getSource().getArchiveNameValue(),
-					p.getSource().getYearOfPublicationValue(),
+					p.getSource().getArchiveName(),
+					p.getSource().getYearOfPublication(),
 					p.getOrmId(),
 					getAuthorList(p.getAuthors()),
-					p.getArticleTitleValue(),
+					p.getTitle(),
 					p.getReferences().size(),
 					p.getCitations().size());
 			System.out.println();
@@ -124,7 +124,7 @@ public class TestORM
 		for (int i = 0; i < authors.size(); ++i)
 		{
 			MmdInlineAuthorInAuthorsInArticle a = authors.get(i);
-			String name = a.getNameValue();
+			String name = a.getName();
 			if (i > 0)
 				sb.append(" and ");
 			sb.append(name);
