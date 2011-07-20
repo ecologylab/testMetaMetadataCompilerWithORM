@@ -54,6 +54,7 @@ public class Paper extends Article
 		super(mmd);
 	}
 
+
 	public MetadataString	abstractField()
 	{
 		MetadataString	result = this.abstractField;
@@ -70,16 +71,15 @@ public class Paper extends Article
 		return this.abstractField().getValue();
 	}
 
-
 	public MetadataString getAbstractFieldMetadata()
 	{
 		return abstractField;
 	}
+
 	public void setAbstractField(String abstractField)
 	{
 		this.abstractField().setValue(abstractField);
 	}
-
 
 	public void setAbstractFieldMetadata(MetadataString abstractField)
 	{

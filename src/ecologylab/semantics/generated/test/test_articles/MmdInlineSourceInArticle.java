@@ -42,6 +42,7 @@ public class MmdInlineSourceInArticle extends Document
 		super(mmd);
 	}
 
+
 	public MetadataInteger	yearOfPublication()
 	{
 		MetadataInteger	result = this.yearOfPublication;
@@ -58,21 +59,21 @@ public class MmdInlineSourceInArticle extends Document
 		return this.yearOfPublication().getValue();
 	}
 
-
 	public MetadataInteger getYearOfPublicationMetadata()
 	{
 		return yearOfPublication;
 	}
+
 	public void setYearOfPublication(int yearOfPublication)
 	{
 		this.yearOfPublication().setValue(yearOfPublication);
 	}
 
-
 	public void setYearOfPublicationMetadata(MetadataInteger yearOfPublication)
 	{
 		this.yearOfPublication = yearOfPublication;
 	}
+
 	public MetadataString	isbn()
 	{
 		MetadataString	result = this.isbn;
@@ -89,21 +90,21 @@ public class MmdInlineSourceInArticle extends Document
 		return this.isbn().getValue();
 	}
 
-
 	public MetadataString getIsbnMetadata()
 	{
 		return isbn;
 	}
+
 	public void setIsbn(String isbn)
 	{
 		this.isbn().setValue(isbn);
 	}
 
-
 	public void setIsbnMetadata(MetadataString isbn)
 	{
 		this.isbn = isbn;
 	}
+
 	public MetadataString	archiveName()
 	{
 		MetadataString	result = this.archiveName;
@@ -120,16 +121,15 @@ public class MmdInlineSourceInArticle extends Document
 		return this.archiveName().getValue();
 	}
 
-
 	public MetadataString getArchiveNameMetadata()
 	{
 		return archiveName;
 	}
+
 	public void setArchiveName(String archiveName)
 	{
 		this.archiveName().setValue(archiveName);
 	}
-
 
 	public void setArchiveNameMetadata(MetadataString archiveName)
 	{

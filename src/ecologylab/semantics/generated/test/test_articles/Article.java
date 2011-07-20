@@ -50,6 +50,7 @@ public class Article extends Document
 		super(mmd);
 	}
 
+
 	public MetadataString	title()
 	{
 		MetadataString	result = this.title;
@@ -66,16 +67,15 @@ public class Article extends Document
 		return this.title().getValue();
 	}
 
-
 	public MetadataString getTitleMetadata()
 	{
 		return title;
 	}
+
 	public void setTitle(String title)
 	{
 		this.title().setValue(title);
 	}
-
 
 	public void setTitleMetadata(MetadataString title)
 	{
@@ -101,6 +101,7 @@ public class Article extends Document
 	{
 		this.source = source;
 	}
+
 	public MetadataString	pages()
 	{
 		MetadataString	result = this.pages;
@@ -117,16 +118,15 @@ public class Article extends Document
 		return this.pages().getValue();
 	}
 
-
 	public MetadataString getPagesMetadata()
 	{
 		return pages;
 	}
+
 	public void setPages(String pages)
 	{
 		this.pages().setValue(pages);
 	}
-
 
 	public void setPagesMetadata(MetadataString pages)
 	{

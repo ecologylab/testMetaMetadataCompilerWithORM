@@ -37,6 +37,7 @@ public class MmdInlineAuthorInAuthorsInArticle extends Metadata
 		super(mmd);
 	}
 
+
 	public MetadataString	name()
 	{
 		MetadataString	result = this.name;
@@ -53,21 +54,21 @@ public class MmdInlineAuthorInAuthorsInArticle extends Metadata
 		return this.name().getValue();
 	}
 
-
 	public MetadataString getNameMetadata()
 	{
 		return name;
 	}
+
 	public void setName(String name)
 	{
 		this.name().setValue(name);
 	}
 
-
 	public void setNameMetadata(MetadataString name)
 	{
 		this.name = name;
 	}
+
 	public MetadataString	affiliation()
 	{
 		MetadataString	result = this.affiliation;
@@ -84,16 +85,15 @@ public class MmdInlineAuthorInAuthorsInArticle extends Metadata
 		return this.affiliation().getValue();
 	}
 
-
 	public MetadataString getAffiliationMetadata()
 	{
 		return affiliation;
 	}
+
 	public void setAffiliation(String affiliation)
 	{
 		this.affiliation().setValue(affiliation);
 	}
-
 
 	public void setAffiliationMetadata(MetadataString affiliation)
 	{

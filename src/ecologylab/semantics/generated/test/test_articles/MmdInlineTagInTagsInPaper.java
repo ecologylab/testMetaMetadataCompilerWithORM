@@ -39,6 +39,7 @@ public class MmdInlineTagInTagsInPaper extends Metadata
 		super(mmd);
 	}
 
+
 	public MetadataParsedURL	link()
 	{
 		MetadataParsedURL	result = this.link;
@@ -55,21 +56,21 @@ public class MmdInlineTagInTagsInPaper extends Metadata
 		return this.link().getValue();
 	}
 
-
 	public MetadataParsedURL getLinkMetadata()
 	{
 		return link;
 	}
+
 	public void setLink(ParsedURL link)
 	{
 		this.link().setValue(link);
 	}
 
-
 	public void setLinkMetadata(MetadataParsedURL link)
 	{
 		this.link = link;
 	}
+
 	public MetadataString	tagName()
 	{
 		MetadataString	result = this.tagName;
@@ -86,16 +87,15 @@ public class MmdInlineTagInTagsInPaper extends Metadata
 		return this.tagName().getValue();
 	}
 
-
 	public MetadataString getTagNameMetadata()
 	{
 		return tagName;
 	}
+
 	public void setTagName(String tagName)
 	{
 		this.tagName().setValue(tagName);
 	}
-
 
 	public void setTagNameMetadata(MetadataString tagName)
 	{
