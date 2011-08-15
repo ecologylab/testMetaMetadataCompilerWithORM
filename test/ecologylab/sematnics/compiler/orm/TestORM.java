@@ -9,9 +9,9 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
 
-import ecologylab.semantics.generated.test.test_articles.MmdInlineAuthorInAuthorsInArticle;
-import ecologylab.semantics.generated.test.test_articles.MmdInlineSourceInArticle;
+import ecologylab.semantics.generated.test.test_articles.Author;
 import ecologylab.semantics.generated.test.test_articles.Paper;
+import ecologylab.semantics.generated.test.test_articles.Source;
 import ecologylab.semantics.metadata.scalar.MetadataString;
 
 public class TestORM
@@ -42,17 +42,17 @@ public class TestORM
 
 		Transaction tx = session.beginTransaction();
 
-		MmdInlineAuthorInAuthorsInArticle author1 = new MmdInlineAuthorInAuthorsInArticle();
+		Author author1 = new Author();
 		author1.setName("Bill Gates");
 		author1.setAffiliation("Microsoft");
 		session.save(author1);
 
-		MmdInlineAuthorInAuthorsInArticle author2 = new MmdInlineAuthorInAuthorsInArticle();
+		Author author2 = new Author();
 		author2.setName("Steve Jobs");
 		author2.setAffiliation("Apple");
 		session.save(author2);
 
-		MmdInlineSourceInArticle conf = new MmdInlineSourceInArticle();
+		Source conf = new Source();
 		conf.setArchiveName("International Conference");
 		conf.setYearOfPublication(2011);
 		conf.setIsbn("123456789");
@@ -60,7 +60,7 @@ public class TestORM
 
 		Paper paper1 = new Paper();
 		paper1.setTitle("apple's design");
-		paper1.setAuthors(new ArrayList<MmdInlineAuthorInAuthorsInArticle>());
+		paper1.setAuthors(new ArrayList<Author>());
 		paper1.getAuthors().add(author1);
 		paper1.setSource(conf);
 		paper1.setKeywords(new ArrayList<MetadataString>());
@@ -70,7 +70,7 @@ public class TestORM
 
 		Paper paper2 = new Paper();
 		paper2.setTitle("bill + steve talk");
-		paper2.setAuthors(new ArrayList<MmdInlineAuthorInAuthorsInArticle>());
+		paper2.setAuthors(new ArrayList<Author>());
 		paper2.getAuthors().add(author1);
 		paper2.getAuthors().add(author2);
 		paper2.setSource(conf);
@@ -118,12 +118,12 @@ public class TestORM
 		session.close();
 	}
 
-	private static String getAuthorList(List<MmdInlineAuthorInAuthorsInArticle> authors)
+	private static String getAuthorList(List<Author> authors)
 	{
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < authors.size(); ++i)
 		{
-			MmdInlineAuthorInAuthorsInArticle a = authors.get(i);
+			Author a = authors.get(i);
 			String name = a.getName();
 			if (i > 0)
 				sb.append(" and ");

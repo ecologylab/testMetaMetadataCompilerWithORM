@@ -9,7 +9,7 @@
 		<property name="hibernate.connection.username">quyin</property>
 		<property name="hibernate.connection.password">quyindbpwd</property>
 
-<!--		<property name="hibernate.show_sql">true</property>-->
+		<!-- <property name="hibernate.show_sql">true</property> -->
 
 		<property name="hibernate.hbm2ddl.auto">create</property>
 
@@ -33,12 +33,12 @@
 		<property name="hibernate.cache.use_query_cache">true</property>
 
 		<!-- Names the annotated entity class -->
-		<mapping file="resources\test-articles\metadata.hbm.xml" />
-		<mapping file="resources\test-articles\document.hbm.xml" />
-		<mapping file="resources\test-articles\article.hbm.xml" />
-		<mapping file="resources\test-articles\mmd_inline_author_in_authors_in_article.hbm.xml" />
-		<mapping file="resources\test-articles\mmd_inline_source_in_article.hbm.xml" />
-		<mapping file="resources\test-articles\mmd_inline_tag_in_tags_in_paper.hbm.xml" />
-		<mapping file="resources\test-articles\paper.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\source.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\document.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\paper.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\author.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\article.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\tag.hbm.xml" />
+		<mapping file="..\testMetaMetadataCompilerWithORM\resources\test-articles\metadata.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles"><joined-subclass name="ecologylab.semantics.generated.test.test_articles.Tag" table="tag" extends="ecologylab.semantics.metadata.Metadata"><key column="orm_id" not-null="true"/><property name="link" lazy="false" column="link" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataParsedURLHibernateType" access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor"/><property name="tagName" lazy="false" column="tag_name" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor"/></joined-subclass></hibernate-mapping>
