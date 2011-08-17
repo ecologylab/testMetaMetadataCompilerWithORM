@@ -1,4 +1,4 @@
-package ecologylab.sematnics.compiler.orm;
+package ecologylab.semantics.compiler.orm;
 
 import java.util.ArrayList;
 import java.util.List;
