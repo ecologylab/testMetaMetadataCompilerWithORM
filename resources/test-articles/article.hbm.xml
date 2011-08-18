@@ -1,4 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-
-<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles"><joined-subclass name="ecologylab.semantics.generated.test.test_articles.Article" table="article" extends="ecologylab.semantics.metadata.builtins.Document"><key column="orm_id" not-null="true"/><bag name="authors" lazy="true" table="article__authors"><key column="orm_id" not-null="true"/><many-to-many column="author_id" class="ecologylab.semantics.generated.test.test_articles.Author"/></bag><many-to-one name="source" lazy="proxy" column="source" class="ecologylab.semantics.generated.test.test_articles.Source"/><property name="pages" lazy="false" column="pages" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType" access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor"/></joined-subclass></hibernate-mapping>
+<hibernate-mapping package="ecologylab.semantics.generated.test.test_articles">
+  <joined-subclass name="ecologylab.semantics.generated.test.test_articles.Article" table="article"
+    extends="ecologylab.semantics.metadata.builtins.Document">
+    <key column="orm_id" not-null="true" />
+    <bag name="authors" lazy="true" table="article__authors">
+      <key column="orm_id" not-null="true" />
+      <many-to-many column="author_id" class="ecologylab.semantics.generated.test.test_articles.Author" />
+    </bag>
+    <many-to-one name="source" lazy="proxy" column="source" class="ecologylab.semantics.generated.test.test_articles.Source" />
+    <property name="pages" lazy="false" column="pages" type="ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType"
+      access="ecologylab.semantics.compiler.orm.scalartypes.MetadataScalarAccessor" />
+  </joined-subclass>
+</hibernate-mapping>
