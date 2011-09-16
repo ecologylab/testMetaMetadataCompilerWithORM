@@ -1,27 +1,30 @@
 package ecologylab.semantics.generated.test.test_articles;
 
-import java.util.ArrayList;
-import ecologylab.semantics.metadata.scalar.MetadataString;
-import ecologylab.semantics.generated.test.test_articles.Source;
-import javax.persistence.ManyToOne;
-import ecologylab.semantics.metametadata.MetaMetadataCompositeField;
-import javax.persistence.Column;
-import javax.persistence.Table;
 import java.util.List;
-import org.hibernate.annotations.Type;
-import javax.persistence.JoinTable;
-import ecologylab.semantics.metadata.builtins.Document;
+
 import javax.persistence.Cacheable;
-import ecologylab.serialization.simpl_inherit;
-import javax.persistence.InheritanceType;
-import ecologylab.semantics.generated.test.test_articles.Author;
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.JoinColumn;
 import javax.persistence.FetchType;
-import javax.persistence.ManyToMany;
 import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+import ecologylab.semantics.metadata.builtins.Document;
+import ecologylab.semantics.metadata.scalar.MetadataString;
+import ecologylab.semantics.metametadata.MetaMetadataCompositeField;
+import ecologylab.serialization.annotations.simpl_collection;
+import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 /**
 *  Article.java

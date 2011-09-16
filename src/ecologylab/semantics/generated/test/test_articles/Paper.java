@@ -1,29 +1,32 @@
 package ecologylab.semantics.generated.test.test_articles;
 
-import ecologylab.semantics.metadata.scalar.MetadataString;
-import javax.persistence.ElementCollection;
-import javax.persistence.CollectionTable;
-import ecologylab.serialization.Hint;
-import javax.persistence.Column;
-import ecologylab.semantics.metametadata.MetaMetadataCompositeField;
-import javax.persistence.Cacheable;
-import ecologylab.serialization.simpl_inherit;
-import javax.persistence.InheritanceType;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import ecologylab.semantics.generated.test.test_articles.Tag;
-import java.util.ArrayList;
-import javax.persistence.Table;
 import java.util.List;
-import ecologylab.semantics.generated.test.test_articles.Article;
-import org.hibernate.annotations.Type;
-import javax.persistence.JoinTable;
-import ecologylab.semantics.generated.test.test_articles.Paper;
+
+import javax.persistence.Cacheable;
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.FetchType;
 import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+import ecologylab.semantics.metadata.scalar.MetadataString;
+import ecologylab.semantics.metametadata.MetaMetadataCompositeField;
+import ecologylab.serialization.annotations.Hint;
+import ecologylab.serialization.annotations.simpl_collection;
+import ecologylab.serialization.annotations.simpl_hints;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.annotations.simpl_tag;
 
 /**
 *  Paper.java
@@ -46,7 +49,7 @@ public class Paper extends Article
 {
 	/** 
 	 */ 
-	@simpl_scalar	@xml_tag("abstract")	@simpl_hints(Hint.XML_LEAF)	
+	@simpl_scalar	@simpl_tag("abstract")	@simpl_hints(Hint.XML_LEAF)	
 	@Column(name = "abstract_field")
 	@Type(type = "ecologylab.semantics.compiler.orm.scalartypes.MetadataStringHibernateType")
 	private ecologylab.semantics.metadata.scalar.MetadataString abstractField;

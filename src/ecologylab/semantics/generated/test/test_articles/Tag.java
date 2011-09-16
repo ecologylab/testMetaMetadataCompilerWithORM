@@ -1,20 +1,23 @@
 package ecologylab.semantics.generated.test.test_articles;
 
+import javax.persistence.Cacheable;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+import ecologylab.net.ParsedURL;
+import ecologylab.semantics.metadata.Metadata;
+import ecologylab.semantics.metadata.scalar.MetadataParsedURL;
 import ecologylab.semantics.metadata.scalar.MetadataString;
 import ecologylab.semantics.metametadata.MetaMetadataCompositeField;
-import javax.persistence.Column;
-import javax.persistence.Cacheable;
-import ecologylab.serialization.simpl_inherit;
-import ecologylab.net.ParsedURL;
-import javax.persistence.InheritanceType;
-import ecologylab.semantics.metadata.scalar.MetadataParsedURL;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Table;
-import org.hibernate.annotations.Type;
-import ecologylab.semantics.metadata.Metadata;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Inheritance;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 /**
 *  Tag.java
